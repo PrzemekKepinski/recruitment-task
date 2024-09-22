@@ -35,8 +35,4 @@ export class DialogComponent {
   onCancelClick(): void {
     this.dialogRef.close();
   }
-
-  changeValue() {
-
-  }
 }
