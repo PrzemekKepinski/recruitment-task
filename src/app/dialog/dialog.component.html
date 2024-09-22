@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{data.property}}</h2>
+<mat-dialog-content>
+  <p>Change {{data.property}}</p>
+  <mat-form-field>
+    <mat-label>{{data.property}}</mat-label>
+    <input #input matInput [value]="data.element[data.property]"/>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button
+          [mat-dialog-close]="{element: data.element, property: data.property, newValue: input.value}"
+          cdkFocusInitial>Ok</button>
+</mat-dialog-actions>
